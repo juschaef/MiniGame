@@ -11,7 +11,7 @@ void loop(t_pong *pong)
 	{
 		key = getarrowkey();
 		put_racket(pong, key);
-		if (count == 10)
+		if (count == 5)
 		{
 			count = 0;
 			set_dest(pong);
@@ -21,7 +21,6 @@ void loop(t_pong *pong)
 			put_ball(pong);
 		}
 		count++;
-		system("clear");
 		print_map(pong);
 		usleep(10000);
 	}

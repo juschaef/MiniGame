@@ -30,6 +30,7 @@ typedef struct	s_pong
 	t_coord		p1_pos;
 	t_coord		p2_pos;
 	t_coord		b_orig;
+	t_coord		b_save;
 	t_coord		b_dest;
 	t_bres		bres;
 	int			recalc;

@@ -4,6 +4,7 @@
 void	print_map(t_pong *pong)
 {
 	int i = 0;
+	system("clear");
 	while (i < 21)
 	{
 		printf("%s\n", pong->map[i]);

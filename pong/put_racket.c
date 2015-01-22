@@ -13,16 +13,16 @@ static void	move_racket(t_pong *pong, int key)
 	switch (key) 
 	{
 		case 1:
-			pong->p1_pos.y++;
+			pong->p1_pos.y--;
 			break;
 		case 2:
-			pong->p2_pos.y++;
-			break;
-		case 3:
 			pong->p2_pos.y--;
 			break;
+		case 3:
+			pong->p2_pos.y++;
+			break;
 		case 4:
-			pong->p1_pos.y--;
+			pong->p1_pos.y++;
 			break;
 		default:
 			break;
