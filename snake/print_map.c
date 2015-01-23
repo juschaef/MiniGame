@@ -13,5 +13,5 @@ void	print_map(t_snake *snake)
 		printf("%s\n", snake->map[i]);
 		i++;
 	}
-	printf("SCORE : [%d]\n", snake->score);
+	printf("SCORE : [%d] | %d\n", snake->score, tail_len(snake));
 }

@@ -7,11 +7,11 @@ typedef struct	s_coord
 	int			y;	
 }				t_coord;
 
-typedef struct		s_elem
+typedef struct		s_tail
 {
 	t_coord			coord;
-	struct s_elem	*next;	
-}					t_elem;
+	struct s_tail	*next;	
+}					t_tail;
 
 typedef struct	s_snake
 {
@@ -20,7 +20,7 @@ typedef struct	s_snake
 	int			dirx;
 	int			diry;
 	int			size;
-	t_elem		*body;
+	t_tail		*body;
 	t_coord		apple;
 	int			apple_here;
 	int			score;
@@ -39,5 +39,7 @@ void			erase_snake(t_snake *snake);
 void			check_fail(t_snake *snake);
 void			check_apple(t_snake *snake);
 void			game_over(t_snake *snake);
+t_tail			*create_tail(t_snake *snake);
+int	tail_len(t_snake *snake);
 
 #endif

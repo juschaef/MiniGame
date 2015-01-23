@@ -2,12 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
 void	loop(t_snake *snake)
 {
 	int key;
 
-	(void)snake;
 	while (1)
 	{
 		key = getarrowkey();
@@ -20,5 +18,4 @@ void	loop(t_snake *snake)
 		print_map(snake);
 		usleep(100000);
 	}
-	key++;
 }
