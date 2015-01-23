@@ -14,5 +14,5 @@ void	game_over(t_snake *snake)
 	snake->map[7][24] = 'R';
 	print_map(snake);
 	sleep(3);
-	exit(1);
+	exit(0);
 }

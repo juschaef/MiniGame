@@ -1,11 +1,14 @@
 NAME= pong
-SRC= *.c
-HEAD= -I .
+SRC= *.c **/*.c
+HEAD= -I includes
 
 all:
-	gcc -Wall -Wextra -Werror $(SRC) $(HEAD)
+	gcc -Wall -Wextra -Werror $(SRC) $(HEAD) -o $(NAME)
 
-flclean:
+fclean:
 	rm -f $(NAME)
 
 re: fclean all
+
+play: re
+	./$(NAME)
