@@ -2,8 +2,10 @@
 
 Shell Minigame in C
 
-Pong :	- bresenham algorithm for ball movement.  
-		- Missing angle handling for collide to wall.
+Pong:  
+- bresenham algorithm for ball movement.  
+- Missing angle handling for collide to wall.
 
-Snake : - Methode unshift & pop for tail handling.
-		- dirty code, clean later.
+Snake:  
+- Method unshift & pop for tail handling. (Thx JS)  
+- Dirty code, clean later.
