@@ -1,0 +1,14 @@
+-> taille + vitesse en argument
+
+-> map carre de base
+-> deplacement du snake
+-> spawn de la pomme
+-> ramassage de la pomme
+-> augmentation du snake et score
+
+char **map -> map
+
+struct snake
+t_coord x/y
+queue (ll) (coord x/y)
+size
