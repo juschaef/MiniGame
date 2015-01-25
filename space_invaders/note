@@ -1,0 +1,67 @@
+struct game 
+{
+	char **map;
+	int mapW;
+	int mapH;
+	struct player;
+	struct *opponents;
+}
+
+strcut coord
+{
+	int x;
+	int y;
+}
+
+struct coords
+{
+	coord coord;
+	coords *next;	
+}
+
+struct player 
+{
+	coord coord;
+	coords *lasers;
+}
+
+struct opponent
+{
+	coord coord;
+	opponenent *next;
+}
+
+main
+_game
+	create_game
+		create_map
+			map 60 * 30
+		create_player
+			 ^
+			[M]
+		create_opp
+			[W]
+	loop
+		hook_key
+		clear
+		move_player
+			L/R
+		move_opp
+			L/R
+		shoot
+			move_shoot
+				iter(lasers)
+			create_shoot
+				new_laser(lasers)
+		check
+			check_shoot
+				iter(lasers + opp)
+		placement
+			place_player
+			place_opp
+			place_shoot
+		print
+			systeme_clear
+			print_map
+			score
+			nb_shoot
