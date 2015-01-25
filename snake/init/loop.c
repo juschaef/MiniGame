@@ -12,8 +12,6 @@ void	loop(t_snake *snake)
 		get_direction(snake, key);
 		put_apple(snake);
 		move_snake(snake);
-
-
 		put_snake(snake);
 		print_map(snake);
 		usleep(100000);

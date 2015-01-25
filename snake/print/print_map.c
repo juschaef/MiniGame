@@ -13,5 +13,5 @@ void	print_map(t_snake *snake)
 		printf("%s\n", snake->map[i]);
 		i++;
 	}
-	printf("SCORE : [%d]", snake->score);
+	printf("SCORE : [%d]\n", snake->score);
 }
