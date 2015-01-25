@@ -34,7 +34,7 @@ struct opponent
 main
 _game
 	create_game
-		create_map
+		create_ma
 			map 60 * 30
 		create_player
 			 ^
