@@ -67,5 +67,6 @@ void		clear_boss(t_game *game);
 void		bads_init(t_game *game);
 void		place_bads(t_game *game);
 void		check_bads(t_game *game);
+void		move_bads(t_game *game);
 
 #endif

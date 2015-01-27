@@ -14,7 +14,7 @@ void	shoot_(t_game *game, int key)
 {
 	static int count = 0;
 
-	if (count >= 25 && key == 3)
+	if (count >= 15 && key == 3)
 	{
 		process_shoot(game);
 		count = 0;

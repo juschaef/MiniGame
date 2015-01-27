@@ -12,6 +12,7 @@ void loop_(t_game* game)
 		move_player(game, key);
 		move_boss(game);
 		move_laser(game);
+		move_bads(game);
 		handle_collider(game);
 		place_player(game);
 		place_boss(game);
