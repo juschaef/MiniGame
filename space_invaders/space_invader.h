@@ -36,6 +36,7 @@ typedef struct	s_game
 	int			score;
 	t_player	*player;
 	t_boss		*boss;
+	t_coords	*bads;
 }				t_game;
 
 void		_game();
@@ -63,5 +64,8 @@ void		check_roof(t_game *game);
 void		check_boss(t_game *game);
 void		win(t_game *game);
 void		clear_boss(t_game *game);
+void		bads_init(t_game *game);
+void		place_bads(t_game *game);
+void		check_bads(t_game *game);
 
 #endif

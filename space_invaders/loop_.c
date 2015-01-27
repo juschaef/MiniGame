@@ -16,6 +16,7 @@ void loop_(t_game* game)
 		place_player(game);
 		place_boss(game);
 		place_laser(game);
+		place_bads(game);
 		print_game(game);
 		usleep(10000);
 	}

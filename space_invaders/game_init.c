@@ -12,5 +12,7 @@ t_game	*game_init()
 	game->score = 0;
 	game->player = player_init();
 	game->boss = boss_init();
+	game->bads = NULL;
+	bads_init(game);
 	return (game);
 }
