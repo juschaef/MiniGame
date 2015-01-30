@@ -60,3 +60,4 @@ loop
 		opp_collide
 		laser_collide
 	print_game
+

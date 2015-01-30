@@ -7,16 +7,17 @@ all:
 ifeq ("x$(MOULITEST)", "x")
 	gcc -Wall -Wextra -Werror -g $(SRC) $(MAIN) $(HEAD) -o $(NAME)
 else
-	echo "fucking MAKEFILE !!!... son of a bitch !"
+	@echo "fucking MAKEFILE !!!... son of a bitch !"
 endif
 
 clean:
-	rm -f *.o
+	@rm -f *.o
 
-fclean:
-	rm -f $(NAME)
+fclean:clean
+	@rm -f $(NAME)
+	@rm -rf *.dSYM
 
 re: fclean all
 
 play: re
-	./$(NAME)
+	@./$(NAME)
