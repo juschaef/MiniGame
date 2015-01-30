@@ -1,7 +1,7 @@
 NAME= r_type
 MAIN = main.c
 SRC= $(shell find . -name "*.c" | grep -v $(MAIN))
-HEAD= -I .
+HEAD= -I includes
 
 all:
 ifeq ("x$(MOULITEST)", "x")

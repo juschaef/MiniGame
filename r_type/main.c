@@ -3,6 +3,6 @@
 
 int		main(void)
 {
-	printf("I'm R_Type BITCH!\n");
+	r_type();
 	return (0);
 }
