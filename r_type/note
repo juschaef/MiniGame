@@ -1,0 +1,62 @@
+R_TYPE
+
+Horizontal scrolling
+ennemy batch
+	basic AI (pattern)
+boss fight
+
+Later
+	// add_bonus
+	// add_enemy_patern
+	// add_level
+
+statement 
+{
+	run
+	boss
+}
+
+game 
+{
+	player
+	statement
+	opp
+	boss
+	score
+}
+
+player 
+{
+	cooord
+	*lasers
+	bonus_rank
+}
+
+opp
+{
+	pattern;
+	coord;
+	*lasers;
+}
+
+
+=====================
+
+init_game
+init_player
+
+
+loop
+	hook_key
+	clear_map
+	event_handler
+		threads
+			4 diff_event
+			1 boss_event
+	spaceship
+		move_spaceship
+		fire
+	check_collide
+		opp_collide
+		laser_collide
+	print_game

@@ -1,6 +1,6 @@
 #include <space_invader.h>
 
- void	check_wall(t_game *game)
+static void	check_wall(t_game *game)
 {
 	if (game->player->coord.x == 1)
 		game->player->coord.x = 2;
@@ -18,6 +18,8 @@ static void	clear_player(t_game *game)
 	game->map[coord.y][coord.x + 1] = ' ';
 	game->map[coord.y][coord.x - 1] = ' ';
 }
+
+
 
 
 void	move_player(t_game *game, int key)
