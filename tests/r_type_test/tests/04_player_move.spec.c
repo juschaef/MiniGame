@@ -36,7 +36,7 @@ static void test03(t_test *test)
 
 	player = player_new();
 	player->coord.y = 30;
-	player_move(player, 2);
+	player_move(player, 1);
 	mt_assert(player->coord.y == 30);
 	free(player);
 }
@@ -47,7 +47,7 @@ static void test04(t_test *test)
 
 	player = player_new();
 	player->coord.y = 0;
-	player_move(player, 1);
+	player_move(player, 2);
 	mt_assert(player->coord.y == 0);
 	free(player);
 }

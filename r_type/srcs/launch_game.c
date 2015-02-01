@@ -10,6 +10,7 @@ void	game_launch(t_game *game)
 	{
 		key = getarrowkey();
 		game_map_clear(game);
+		game_event_handler(game);
 		player_handling(game->player, key);
 		game_put(game);
 		game_print(game);

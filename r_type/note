@@ -61,3 +61,10 @@ loop
 		laser_collide
 	print_game
 
+
+opponent_routine
+	create_
+	move_left_ x 10
+	move_down_ x 7
+	move_left_ x 10
+	move_down_ x 5

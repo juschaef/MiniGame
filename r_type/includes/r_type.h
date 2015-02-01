@@ -6,7 +6,7 @@
 /*   By: juschaef <juschaef@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/28 10:12:06 by juschaef          #+#    #+#             */
-/*   Updated: 2015/01/30 22:32:12 by juschaef         ###   ########.fr       */
+/*   Updated: 2015/02/01 16:37:06 by juschaef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef	struct	s_coords
 {
 	t_coord		coord;
 	t_coords	*next;
+	t_coords	*prev;
 }				t_coords;
 
 typedef struct	s_player
@@ -56,12 +57,25 @@ typedef struct	s_game
 void		r_type();
 
 /*
+** Laser obj
+*/
+
+t_coords	*laser_new(int y);
+void		laser_link(t_coords *laser1, t_coords *laser2);
+void		laser_push(t_player *player, t_coords *laser);
+void		laser_iter(t_player *player, void f(t_coords *, void *), void *context);
+void		laser_del(t_coords *laser, t_player *player);
+
+/*
 **	Player obj
 */
 
 t_player	*player_new();
 void		player_handling(t_player *player, int key);
 void		player_move(t_player *player, int key);
+void		player_shoot(t_player *player);
+void		player_laser_handler(t_player *player, int key);
+void		player_laser_move(t_player *player);
 
 /*
 **	Game obj
@@ -74,6 +88,9 @@ void		game_print(t_game *game);
 void		game_map_clear(t_game *game);
 void		game_put(t_game *game);
 void		game_player_put(t_game *game);
+void		game_laser_put(t_game *game);
+void		game_event_handler(t_game *game);
+
 
 /*
 ** Fonction de lib

@@ -1,21 +1,20 @@
 #include <r_type.h>
 
+static void	clear_player(char **map, t_player *player)
+{
+	map[player->coord.y][player->coord.x] = ' ';
+}
+
+static void	clear_laser(t_coords *laser, void *map_)
+{
+	char **map;
+
+	map = map_;
+	map[laser->coord.y][laser->coord.x] = ' ';
+}
+
 void	game_map_clear(t_game *game)
 {
-	char	**map;
-	int		y;
-	int		x;
-
-	map = game->map;
-	y = 1;
-	while (y < 30)
-	{
-		x = 1;
-		while (x < 100)
-		{
-			map[y][x] = ' ';
-			x++;
-		}
-		y++;
-	}
+	clear_player(game->map, game->player);
+	laser_iter(game->player, clear_laser, game->map);
 }
